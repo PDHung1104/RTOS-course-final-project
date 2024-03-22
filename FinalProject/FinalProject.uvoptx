@@ -272,8 +272,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\test_comm.h</PathWithFileName>
-      <FilenameWithoutPath>test_comm.h</FilenameWithoutPath>
+      <PathWithFileName>.\led_manager.h</PathWithFileName>
+      <FilenameWithoutPath>led_manager.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -284,8 +284,20 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\test_comm.c</PathWithFileName>
-      <FilenameWithoutPath>test_comm.c</FilenameWithoutPath>
+      <PathWithFileName>.\led_manager.c</PathWithFileName>
+      <FilenameWithoutPath>led_manager.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>8</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\delay.h</PathWithFileName>
+      <FilenameWithoutPath>delay.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

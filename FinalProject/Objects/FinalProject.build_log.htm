@@ -22,24 +22,48 @@ Dialog DLL:      TARMCM1.DLL V1.14.1.0
  
 <h2>Project:</h2>
 C:\Users\hewle\Documents\NUS\CG2271\Project\FinalProject\FinalProject.uvprojx
-Project File Date:  03/21/2024
+Project File Date:  03/23/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_MKL25Z4.s...
+compiling circular_buffer.c...
+circular_buffer.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+circular_buffer.c: 1 warning, 0 errors
+compiling RTX_Config.c...
+compiling rtx_lib.c...
+compiling led_manager.c...
+delay.h(9): warning:  #1-D: last line of file ends without a newline
+  }
+led_manager.h(34): warning:  #1-D: last line of file ends without a newline
+  void set_all_front_led(void);
+led_manager.c(108): warning:  #1-D: last line of file ends without a newline
+  }
+led_manager.c: 3 warnings, 0 errors
+compiling system_MKL25Z4.c...
 compiling main.c...
-motor_driver.h(120): warning:  #1-D: last line of file ends without a newline
+delay.h(9): warning:  #1-D: last line of file ends without a newline
   }
-esp.h(48): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "Q_T *"
-  	Q_init(&buffer);
-test_comm.h(22): warning:  #1-D: last line of file ends without a newline
-  void led_control(color_t);
-main.c(30): warning:  #1-D: last line of file ends without a newline
+motor_driver.h(114): warning:  #1-D: last line of file ends without a newline
   }
-main.c: 4 warnings, 0 errors
+led_manager.h(34): warning:  #1-D: last line of file ends without a newline
+  void set_all_front_led(void);
+main.c(128): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "osThreadFunc_t"
+  	frontId = osThreadNew(tFront, NULL, NULL);
+main.c(129): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "osThreadFunc_t"
+  	rearId = osThreadNew(tRear, NULL, NULL);
+main.c(130): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "osThreadFunc_t"
+  	brainId = osThreadNew(tBrain, NULL, NULL);
+main.c(131): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "osThreadFunc_t"
+  	motorId = osThreadNew(tMotorControl, NULL, NULL);
+main.c(139): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 8 warnings, 0 errors
 linking...
-Program Size: Code=2756 RO-data=496 RW-data=5116 ZI-data=260  
-".\Objects\FinalProject.axf" - 0 Error(s), 4 Warning(s).
+Program Size: Code=8860 RO-data=496 RW-data=5136 ZI-data=264  
+".\Objects\FinalProject.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -74,25 +98,25 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.1
-      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
-      Source file:   CMSIS\RTOS2\RTX\Template\main.c
-      Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
       Source file:   CMSIS\RTOS2\RTX\Template\Mutex.c
-      Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
+      Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
       Source file:   CMSIS\RTOS2\RTX\Template\svc_user.c
       Source file:   CMSIS\RTOS2\RTX\Source\rtx_lib.c
-      Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
       Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib
+      Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
+      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
       Include file:  CMSIS\RTOS2\RTX\Include\rtx_os.h
+      Source file:   CMSIS\RTOS2\RTX\Template\main.c
+      Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
 
    * Component: Keil::Device:Startup:2.5.0
-      Source file:   Device\Source\ARM\startup_MKL25Z4.s
       Include file:  Device\Source\system_MKL25Z4.h
       Source file:   Device\Source\system_MKL25Z4.c
+      Source file:   Device\Source\ARM\startup_MKL25Z4.s
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

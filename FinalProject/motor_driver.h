@@ -1,16 +1,10 @@
 #pragma once
 #include "MKL25Z4.h"                    // Device header
+#include "delay.h"
 #define PTBO_Pin	0
 #define PTB1_Pin	1
 #define PTA2_Pin	2
 #define PTA3_Pin	3
-
-static void delay(volatile uint32_t nof) {
-  while(nof!=0) {
-    __asm("NOP");
-    nof--;
-  }
-}
 
 void initPWM(void);
 

@@ -2,6 +2,7 @@
 #define UART_RX_PORTE23 23
 #include <stdio.h>
 #include "circular_buffer.h"
+#include <cmsis_os2.h>
 /**
 	Use UART2 for communication. Only Rx is used for the MCU
 */
@@ -11,12 +12,7 @@ Will implement circular buffer in later updates
 */
 
 //Q_T buffer;
-unsigned char buffer;
-void UART2_IRQHandler(void){
-	if (UART2->S1 && UART_S1_RDRF_MASK) {
-		buffer = UART2->D;
-	}
-}
+
 
 void initUART2(uint32_t baud_rate) {
 	uint32_t divisor, bus_clk;
@@ -45,5 +41,4 @@ void initUART2(uint32_t baud_rate) {
 	NVIC_EnableIRQ(UART2_IRQn);
 	
 	UART2->C2 |= (UART_C2_RE_MASK | UART_C2_RIE_MASK);
-	Q_init(&buffer);
 }
