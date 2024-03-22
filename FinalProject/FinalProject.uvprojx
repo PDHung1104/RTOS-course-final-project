@@ -408,14 +408,19 @@
               <FilePath>.\circular_buffer.c</FilePath>
             </File>
             <File>
-              <FileName>test_comm.h</FileName>
+              <FileName>led_manager.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\test_comm.h</FilePath>
+              <FilePath>.\led_manager.h</FilePath>
             </File>
             <File>
-              <FileName>test_comm.c</FileName>
+              <FileName>led_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\test_comm.c</FilePath>
+              <FilePath>.\led_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\delay.h</FilePath>
             </File>
           </Files>
         </Group>
