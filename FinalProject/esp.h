@@ -10,10 +10,11 @@
 Will implement circular buffer in later updates
 */
 
-Q_T buffer;
+//Q_T buffer;
+unsigned char buffer;
 void UART2_IRQHandler(void){
 	if (UART2->S1 && UART_S1_RDRF_MASK) {
-		enqueue(&buffer, UART2->D);
+		buffer = UART2->D;
 	}
 }
 
