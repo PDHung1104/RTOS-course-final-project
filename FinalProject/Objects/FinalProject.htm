@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\FinalProject.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\FinalProject.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Mar 21 00:13:19 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Mar 22 14:36:44 2024
 <BR><P>
 <H3>Maximum Stack Usage =         56 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -68,7 +68,7 @@ Global Symbols
 <P><STRONG><a name="[28]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl25z4.o(.text)
 </UL>
-<P><STRONG><a name="[48]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[47]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[2b]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -78,15 +78,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[49]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[48]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[4a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[49]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[4b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[4a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[4c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[4b]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[4d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[4c]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[2a]"></a>Reset_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, startup_mkl25z4.o(.text))
 
@@ -217,15 +217,17 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl25z4.o(RESET)
 </UL>
-<P><STRONG><a name="[4e]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[4d]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[3b]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;backward
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_right
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_left
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;backward
 </UL>
 
 <P><STRONG><a name="[2c]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
@@ -234,11 +236,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[4f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[4e]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[50]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
+<P><STRONG><a name="[4f]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
 
-<P><STRONG><a name="[51]"></a>__decompress0</STRONG> (Thumb, 58 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
+<P><STRONG><a name="[50]"></a>__decompress0</STRONG> (Thumb, 58 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
 
 <P><STRONG><a name="[39]"></a>OS_Tick_AcknowledgeIRQ</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, os_systick.o(.text.OS_Tick_AcknowledgeIRQ))
 <BR><BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxTick_Handler
@@ -325,20 +327,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[46]"></a>InitGPIO</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, test_comm.o(i.InitGPIO))
+<P><STRONG><a name="[42]"></a>InitGPIO</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, test_comm.o(i.InitGPIO))
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[40]"></a>Q_Empty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, circular_buffer.o(i.Q_Empty))
-<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dequeue
-</UL>
-
-<P><STRONG><a name="[41]"></a>Q_Full</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, circular_buffer.o(i.Q_Full))
-<BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enqueue
-</UL>
-
-<P><STRONG><a name="[45]"></a>Q_init</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, circular_buffer.o(i.Q_init))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
+<P><STRONG><a name="[41]"></a>Q_init</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, circular_buffer.o(i.Q_init))
+<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
 </UL>
 
 <P><STRONG><a name="[3a]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 372 bytes, Stack size 16 bytes, system_mkl25z4.o(i.SystemCoreClockUpdate))
@@ -353,11 +347,7 @@ Global Symbols
 <P><STRONG><a name="[27]"></a>SystemInit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, system_mkl25z4.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl25z4.o(.text)
 </UL>
-<P><STRONG><a name="[14]"></a>UART2_IRQHandler</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, main.o(i.UART2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = UART2_IRQHandler &rArr; enqueue
-</UL>
-<BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;enqueue
-</UL>
+<P><STRONG><a name="[14]"></a>UART2_IRQHandler</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(i.UART2_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mkl25z4.o(RESET)
 </UL>
 <P><STRONG><a name="[3c]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, main.o(i.__ARM_common_switch8))
@@ -368,13 +358,13 @@ Global Symbols
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[52]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[51]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[53]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[52]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[54]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[53]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[3e]"></a>backward</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, main.o(i.backward))
+<P><STRONG><a name="[3d]"></a>backward</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, main.o(i.backward))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = backward &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
@@ -382,23 +372,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3f]"></a>dequeue</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, circular_buffer.o(i.dequeue))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = dequeue
-</UL>
-<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Q_Empty
-</UL>
-<BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[3d]"></a>enqueue</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, circular_buffer.o(i.enqueue))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = enqueue
-</UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Q_Full
-</UL>
-<BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_IRQHandler
-</UL>
-
-<P><STRONG><a name="[42]"></a>forward</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.forward))
+<P><STRONG><a name="[3e]"></a>forward</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.forward))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = forward &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
@@ -406,26 +380,32 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[43]"></a>initUART2</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, main.o(i.initUART2))
+<P><STRONG><a name="[43]"></a>initMotorPWM</STRONG> (Thumb, 362 bytes, Stack size 0 bytes, main.o(i.initMotorPWM))
+<BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[3f]"></a>initUART2</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, main.o(i.initUART2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = initUART2 &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Q_init
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Q_init
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[26]"></a>main</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[26]"></a>main</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = main &rArr; SystemCoreClockUpdate &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dequeue
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitGPIO
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;backward
+<BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitGPIO
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_right
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turn_left
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initMotorPWM
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forward
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;backward
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -438,17 +418,33 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadStackCheck
 </UL>
 
-<P><STRONG><a name="[47]"></a>stop</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(i.stop))
+<P><STRONG><a name="[44]"></a>stop</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(i.stop))
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[45]"></a>turn_left</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, main.o(i.turn_left))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = turn_left &rArr; __aeabi_uidivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[46]"></a>turn_right</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.turn_right))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = turn_right &rArr; __aeabi_uidivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[44]"></a>__NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, main.o(i.__NVIC_SetPriority))
+<P><STRONG><a name="[40]"></a>__NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, main.o(i.__NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART2
 </UL>
 
 <P><STRONG><a name="[34]"></a>osRtxThreadBlock</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, rtx_thread.o(.text.osRtxThreadBlock))
