@@ -2,6 +2,7 @@
 #include "esp.h"
 #include "led_manager.h"
 #include <cmsis_os2.h>
+#include "buzzer.h"
 
 typedef enum {
 	moving,
@@ -9,14 +10,14 @@ typedef enum {
 } move_state;
 
 typedef enum {
-	track_tone,
-	end_tone
+	track,
+	end
 } tone_type;
 
-move_state state = moving;
-tone_type tone = track_tone;
+move_state state = stopping;
+tone_type tone = track;
 
-osThreadId_t brainId, motorId, frontId, rearId;
+osThreadId_t brainId, motorId, frontId, rearId, audioId;
 
 unsigned char buffer;
 void UART2_IRQHandler(void){
@@ -44,7 +45,10 @@ void tBrain(void) {
 				state = moving;
 				break;
 			case 0x87: //play end tone
-				tone = end_tone;
+				tone = end;
+				break;
+			case 0x88: //change back to track tone
+				tone = track;
 				break;
 		}
 		osThreadFlagsClear(0x0001); //clear the flag to block this thread
@@ -111,10 +115,12 @@ void tRear(void) {
 }
 
 void tAudio(void) {
-	if (tone == track_tone) {
-		//insert code to play track tone
-	} else {
-		//insert code to play end tone
+	for(;;) {
+		if (tone == track) {
+			track_tone();
+		} else {
+			stop_tone();
+		}
 	}
 }
 
@@ -123,8 +129,10 @@ int main(void){
 	initUART2(9600);
 	initMotorPWM();
 	initLEDGPIO();
+	initPWMBuzzer();
 	
 	osKernelInitialize();
+	audioId = osThreadNew(tAudio, NULL, NULL);
 	frontId = osThreadNew(tFront, NULL, NULL);
 	rearId = osThreadNew(tRear, NULL, NULL);
 	brainId = osThreadNew(tBrain, NULL, NULL);
@@ -133,7 +141,7 @@ int main(void){
 	osThreadSetPriority(motorId, osPriorityNormal);
 	osThreadSetPriority(frontId, osPriorityLow);
 	osThreadSetPriority(rearId, osPriorityLow);
+	osThreadSetPriority(audioId, osPriorityLow);
 	osKernelStart();
-	
 	for(;;);
 }
