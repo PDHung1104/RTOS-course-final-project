@@ -112,12 +112,12 @@ uint32_t freq_2_mod(uint32_t freq){
 }
 
 //shape of you
-void track_tone(void) {
+void track_tone(tone_type* tone) {
 	int size = sizeof(track_tone_durations) / sizeof(int);
-	for (int i=0;i<size; i++){
+	for (int i=0;i<size && (*tone) == track; i++){
 		TPM0->MOD = freq_2_mod (track_tone_melody[i]);
 		TPM0_C4V = freq_2_mod (track_tone_melody[i]) / 2;
-		int duration = 750U/track_tone_durations[i];
+		int duration = 500U/track_tone_durations[i];
 		osDelay(duration);
 		TPM0_C4V = 0;
 		osDelay(duration * 1.3);
@@ -125,9 +125,9 @@ void track_tone(void) {
 }
 
 //christmas song
-void stop_tone(void) {
+void stop_tone(tone_type* tone) {
 	int size = sizeof(stop_tone_durations) / sizeof(int);
-	for (int i=0;i<size; i++){
+	for (int i=0;i<size && (*tone) == end; i++){
 		TPM0->MOD = freq_2_mod (stop_tone_melody[i]);
 		TPM0_C4V = freq_2_mod (stop_tone_melody[i]) / 2;
 		int duration = 1000U/stop_tone_durations[i];
