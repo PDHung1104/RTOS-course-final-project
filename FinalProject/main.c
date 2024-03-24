@@ -9,13 +9,12 @@ typedef enum {
 	stopping
 } move_state;
 
-typedef enum {
-	track,
-	end
-} tone_type;
+
 
 move_state state = stopping;
 tone_type tone = track;
+
+int speed = 50;
 
 osThreadId_t brainId, motorId, frontId, rearId, audioId;
 
@@ -50,6 +49,12 @@ void tBrain(void) {
 			case 0x88: //change back to track tone
 				tone = track;
 				break;
+			case 0x89: //boost
+				speed = 80;
+				break;
+			case 0x90: //normal speed
+				speed = 50;
+				break;
 		}
 		osThreadFlagsClear(0x0001); //clear the flag to block this thread
 	}
@@ -64,10 +69,10 @@ void tMotorControl(void){
 				stop();
 				break;
 			case 0x83: //forward
-				forward(50);
+				forward(speed);
 				break;
 			case 0x84: //backward
-				backward(50);
+				backward(speed);
 				break;
 			case 0x85: //turn left
 				turn_left(50);
@@ -117,9 +122,9 @@ void tRear(void) {
 void tAudio(void) {
 	for(;;) {
 		if (tone == track) {
-			track_tone();
+			track_tone(&tone);
 		} else {
-			stop_tone();
+			stop_tone(&tone);
 		}
 	}
 }
