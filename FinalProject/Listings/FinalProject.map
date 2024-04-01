@@ -1269,19 +1269,19 @@ Image Symbol Table
     i.tBrain                                 0x000025a0   Section        0  main.o(i.tBrain)
     i.tFront                                 0x00002634   Section        0  main.o(i.tFront)
     i.tMotorControl                          0x0000267c   Section        0  main.o(i.tMotorControl)
-    i.tRear                                  0x000026dc   Section        0  main.o(i.tRear)
-    i.track_tone                             0x0000271c   Section        0  buzzer.o(i.track_tone)
-    i.turn_left                              0x000027a8   Section        0  main.o(i.turn_left)
-    i.turn_right                             0x000027e4   Section        0  main.o(i.turn_right)
-    .constdata                               0x00002824   Section      100  rtx_lib.o(.constdata)
-    os_idle_thread_attr                      0x00002824   Data          36  rtx_lib.o(.constdata)
-    os_timer_thread_attr                     0x00002848   Data          36  rtx_lib.o(.constdata)
-    os_timer_mq_attr                         0x0000286c   Data          24  rtx_lib.o(.constdata)
-    .rodata                                  0x00002888   Section      160  rtx_lib.o(.rodata)
-    __tagsym$$used                           0x00002888   Number         0  rtx_lib.o(.rodata)
-    __tagsym$$used                           0x000028f0   Number         0  rtx_lib.o(.rodata)
-    [Anonymous Symbol]                       0x00002928   Section        0  rtx_kernel.o(.rodata.str1.4)
-    .L.str                                   0x00002928   Data          11  rtx_kernel.o(.rodata.str1.4)
+    i.tRear                                  0x000026e4   Section        0  main.o(i.tRear)
+    i.track_tone                             0x00002724   Section        0  buzzer.o(i.track_tone)
+    i.turn_left                              0x000027b0   Section        0  main.o(i.turn_left)
+    i.turn_right                             0x000027f0   Section        0  main.o(i.turn_right)
+    .constdata                               0x0000282c   Section      100  rtx_lib.o(.constdata)
+    os_idle_thread_attr                      0x0000282c   Data          36  rtx_lib.o(.constdata)
+    os_timer_thread_attr                     0x00002850   Data          36  rtx_lib.o(.constdata)
+    os_timer_mq_attr                         0x00002874   Data          24  rtx_lib.o(.constdata)
+    .rodata                                  0x00002890   Section      160  rtx_lib.o(.rodata)
+    __tagsym$$used                           0x00002890   Number         0  rtx_lib.o(.rodata)
+    __tagsym$$used                           0x000028f8   Number         0  rtx_lib.o(.rodata)
+    [Anonymous Symbol]                       0x00002930   Section        0  rtx_kernel.o(.rodata.str1.4)
+    .L.str                                   0x00002930   Data          11  rtx_kernel.o(.rodata.str1.4)
     .bss.os                                  0x1ffff000   Section     4160  rtx_lib.o(.bss.os)
     os_mem                                   0x1ffff000   Data        4096  rtx_lib.o(.bss.os)
     os_isr_queue                             0x20000000   Data          64  rtx_lib.o(.bss.os)
@@ -1468,16 +1468,16 @@ Image Symbol Table
     tAudio                                   0x00002581   Thumb Code    26  main.o(i.tAudio)
     tBrain                                   0x000025a1   Thumb Code   128  main.o(i.tBrain)
     tFront                                   0x00002635   Thumb Code    68  main.o(i.tFront)
-    tMotorControl                            0x0000267d   Thumb Code    86  main.o(i.tMotorControl)
-    tRear                                    0x000026dd   Thumb Code    58  main.o(i.tRear)
-    track_tone                               0x0000271d   Thumb Code   120  buzzer.o(i.track_tone)
-    turn_left                                0x000027a9   Thumb Code    52  main.o(i.turn_left)
-    turn_right                               0x000027e5   Thumb Code    54  main.o(i.turn_right)
-    osRtxUserSVC                             0x00002884   Data           4  rtx_lib.o(.constdata)
-    osRtxConfig                              0x00002888   Data         104  rtx_lib.o(.rodata)
-    os_cb_sections                           0x000028f0   Data          56  rtx_lib.o(.rodata)
-    Region$$Table$$Base                      0x00002934   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00002954   Number         0  anon$$obj.o(Region$$Table)
+    tMotorControl                            0x0000267d   Thumb Code    96  main.o(i.tMotorControl)
+    tRear                                    0x000026e5   Thumb Code    58  main.o(i.tRear)
+    track_tone                               0x00002725   Thumb Code   120  buzzer.o(i.track_tone)
+    turn_left                                0x000027b1   Thumb Code    54  main.o(i.turn_left)
+    turn_right                               0x000027f1   Thumb Code    52  main.o(i.turn_right)
+    osRtxUserSVC                             0x0000288c   Data           4  rtx_lib.o(.constdata)
+    osRtxConfig                              0x00002890   Data         104  rtx_lib.o(.rodata)
+    os_cb_sections                           0x000028f8   Data          56  rtx_lib.o(.rodata)
+    Region$$Table$$Base                      0x0000293c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000295c   Number         0  anon$$obj.o(Region$$Table)
     .bss.os.msgqueue.cb$$Base                0x20000040   Number         0  rtx_lib.o(.bss.os.msgqueue.cb)
     .bss.os.msgqueue.cb$$Limit               0x20000074   Number         0  rtx_lib.o(.bss.os.msgqueue.cb)
     .bss.os.thread.cb$$Base                  0x200000c4   Number         0  rtx_lib.o(.bss.os.thread.cb)
@@ -1507,9 +1507,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000d5
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000041bc, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00002a10])
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000041c4, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00002a18])
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00002954, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000295c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1642,19 +1642,19 @@ Memory Map of the image
     0x00002580   0x00002580   0x00000020   Code   RO           12    i.tAudio            main.o
     0x000025a0   0x000025a0   0x00000094   Code   RO           13    i.tBrain            main.o
     0x00002634   0x00002634   0x00000048   Code   RO           14    i.tFront            main.o
-    0x0000267c   0x0000267c   0x00000060   Code   RO           15    i.tMotorControl     main.o
-    0x000026dc   0x000026dc   0x00000040   Code   RO           16    i.tRear             main.o
-    0x0000271c   0x0000271c   0x0000008c   Code   RO          273    i.track_tone        buzzer.o
-    0x000027a8   0x000027a8   0x0000003c   Code   RO           17    i.turn_left         main.o
-    0x000027e4   0x000027e4   0x00000040   Code   RO           18    i.turn_right        main.o
-    0x00002824   0x00002824   0x00000064   Data   RO          332    .constdata          rtx_lib.o
-    0x00002888   0x00002888   0x000000a0   Data   RO          334    .rodata             rtx_lib.o
-    0x00002928   0x00002928   0x0000000b   Data   RO          490    .rodata.str1.4      RTX_CM0.lib(rtx_kernel.o)
-    0x00002933   0x00002933   0x00000001   PAD
-    0x00002934   0x00002934   0x00000020   Data   RO          941    Region$$Table       anon$$obj.o
+    0x0000267c   0x0000267c   0x00000068   Code   RO           15    i.tMotorControl     main.o
+    0x000026e4   0x000026e4   0x00000040   Code   RO           16    i.tRear             main.o
+    0x00002724   0x00002724   0x0000008c   Code   RO          273    i.track_tone        buzzer.o
+    0x000027b0   0x000027b0   0x00000040   Code   RO           17    i.turn_left         main.o
+    0x000027f0   0x000027f0   0x0000003c   Code   RO           18    i.turn_right        main.o
+    0x0000282c   0x0000282c   0x00000064   Data   RO          332    .constdata          rtx_lib.o
+    0x00002890   0x00002890   0x000000a0   Data   RO          334    .rodata             rtx_lib.o
+    0x00002930   0x00002930   0x0000000b   Data   RO          490    .rodata.str1.4      RTX_CM0.lib(rtx_kernel.o)
+    0x0000293b   0x0000293b   0x00000001   PAD
+    0x0000293c   0x0000293c   0x00000020   Data   RO          941    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x1ffff000, Load base: 0x00002954, Size: 0x00001868, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x000000bc])
+    Execution Region ER_RW (Exec base: 0x1ffff000, Load base: 0x0000295c, Size: 0x00001868, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x000000bc])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1671,12 +1671,12 @@ Memory Map of the image
     0x200007c4   COMPRESSED   0x000000a4   Data   RW          491    .data.os            RTX_CM0.lib(rtx_kernel.o)
 
 
-    Execution Region ER_ZI (Exec base: 0x20000868, Load base: 0x00002a10, Size: 0x00000108, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000868, Load base: 0x00002a18, Size: 0x00000108, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000868        -       0x00000001   Zero   RW          833    .bss.PendST         RTX_CM0.lib(os_systick.o)
-    0x20000869   0x00002a10   0x00000007   PAD
+    0x20000869   0x00002a18   0x00000007   PAD
     0x20000870        -       0x00000100   Zero   RW          393    STACK               startup_mkl25z4.o
 
 
@@ -1689,14 +1689,14 @@ Image component sizes
 
        472         62          0       1104          0       3036   buzzer.o
        772         62          0          0          0       2664   led_manager.o
-      1656        222          0         29          0     236350   main.o
+      1664        220          0         29          0     236362   main.o
         36          8          0          0          0        973   rtx_config.o
          0          0        260       4940          0       9178   rtx_lib.o
         56         30        192          0        256        872   startup_mkl25z4.o
        412         42          0          4          0       1527   system_mkl25z4.o
 
     ----------------------------------------------------------------------
-      3406        426        484       6084        256     254600   Object Totals
+      3414        424        484       6084        256     254612   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          7          0          0   (incl. Padding)
 
@@ -1759,15 +1759,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10084        762        496       6248        264     365452   Grand Totals
-     10084        762        496        188        264     365452   ELF Image Totals (compressed)
-     10084        762        496        188          0          0   ROM Totals
+     10092        760        496       6248        264     365464   Grand Totals
+     10092        760        496        188        264     365464   ELF Image Totals (compressed)
+     10092        760        496        188          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10580 (  10.33kB)
+    Total RO  Size (Code + RO Data)                10588 (  10.34kB)
     Total RW  Size (RW Data + ZI Data)              6512 (   6.36kB)
-    Total ROM Size (Code + RO Data + RW Data)      10768 (  10.52kB)
+    Total ROM Size (Code + RO Data + RW Data)      10776 (  10.52kB)
 
 ==============================================================================
 

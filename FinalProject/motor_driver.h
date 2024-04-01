@@ -79,7 +79,7 @@ void forward(int speed) {
 		TPM2_C0V = (speed * TPM2->MOD) / 100;
 }
 
-void backward(int speed) {
+void backward (int speed) {
 	//change the value later
 		TPM1_C0V = 0; // 0xEA6 = 3750 (7500/2, 50% duty cycle)	
 		TPM1_C1V = (speed * TPM1->MOD) / 100;
@@ -96,19 +96,19 @@ void stop(){
 	TPM2_C0V = 0;
 }
 
-void turn_left(int speed) {
-		TPM1_C1V = (speed * TPM1->MOD) / 100;; 
+void turn_right(int speed) {
+		TPM1_C1V = (speed * TPM1->MOD) / 100;
 		TPM1_C0V = 0;
 	
 		TPM2_C1V = 0;	
 		TPM2_C0V = (speed * TPM2->MOD) / 100;
 }
 
-void turn_right(int speed) {
+void turn_left(int speed) {
 	//change the value later
 		TPM1_C1V = 0;	
 		TPM1_C0V = (speed * TPM1->MOD) / 100;
 	
-		TPM2_C1V = (speed * TPM2->MOD) / 100;
+		TPM2_C1V = (speed * TPM2->MOD) / 100;;
 		TPM2_C0V = 0;
 }

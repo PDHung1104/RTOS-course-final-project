@@ -9,8 +9,6 @@ typedef enum {
 	stopping
 } move_state;
 
-
-
 move_state state = stopping;
 tone_type tone = track;
 
@@ -32,16 +30,16 @@ void tBrain(void) {
 		osThreadFlagsWait(0x0001, osFlagsWaitAny, osWaitForever);
 		switch(buffer) {
 			case 0x82: //stop
-				osThreadFlagsSet(motorId, 0x0001);
 				state = stopping;
+				osThreadFlagsSet(motorId, 0x0001);
 				break;
 			case 0x83: //forward
 			case 0x84: //backward
 			case 0x85: //turn left
 			case 0x86: //turn right
 				//add set flag here to put t_motor into READY
-				osThreadFlagsSet(motorId, 0x0001);
 				state = moving;
+				osThreadFlagsSet(motorId, 0x0001);
 				break;
 			case 0x87: //play end tone
 				tone = end;
@@ -75,11 +73,13 @@ void tMotorControl(void){
 				backward(speed);
 				break;
 			case 0x85: //turn left
-				turn_left(50);
+				turn_left(speed);
 				break;
 			case 0x86: //turn right
-				turn_right(50);
+				turn_right(speed);
 				break;
+			default:
+				stop();
 		}
 		// add clear flag here to block t_motor
 		osThreadFlagsClear(0x0001);
